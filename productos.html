@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Productos - Ferremas</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/productos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="logo">
+          <h1><a href="index.html">Ferremas</a></h1>
+        </div>
+        <nav>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="productos.html" class="active">Productos</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+        <div class="user-actions">
+          <a href="carrito.html" class="cart-icon">
+            <img src="img/cart.svg" alt="Carrito" />
+            <span id="cart-count">0</span>
+          </a>
+          <a href="login.html" id="login-btn" class="btn">Iniciar Sesión</a>
+          <div id="user-profile" class="hidden">
+            <span id="username">Usuario</span>
+            <button id="logout-btn">Cerrar Sesión</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="page-header">
+      <div class="container">
+        <h1>Productos</h1>
+        <form id="search-form" class="search-form">
+          <input
+            type="text"
+            id="search-input"
+            placeholder="Buscar productos..."
+          />
+          <button type="submit">Buscar</button>
+        </form>
+      </div>
+    </section>
+
+    <main class="products-container">
+      <div class="container">
+        <div class="filters">
+          <h3>Filtrar por</h3>
+          <div class="filter-group">
+            <h4>Categorías</h4>
+            <ul id="category-filters">
+              <li>
+                <label>
+                  <input type="checkbox" name="category" value="herramientas" />
+                  Herramientas
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="category" value="materiales" />
+                  Materiales
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="category" value="fontaneria" />
+                  Fontanería
+                </label>
+              </li>
+              <li>
+                <label>
+                  <input type="checkbox" name="category" value="electricidad" />
+                  Electricidad
+                </label>
+              </li>
+            </ul>
+          </div>
+          <div class="filter-group">
+            <h4>Precio</h4>
+            <div class="price-range">
+              <input
+                type="range"
+                id="price-range"
+                min="0"
+                max="1000"
+                step="10"
+                value="1000"
+              />
+              <div class="price-values">
+                <span>$0</span>
+                <span id="price-value">$1000</span>
+              </div>
+            </div>
+          </div>
+          <button id="apply-filters" class="btn">Aplicar Filtros</button>
+          <button id="clear-filters" class="btn btn-outline">
+            Limpiar Filtros
+          </button>
+        </div>
+        <div class="products-grid">
+          <div class="sort-options">
+            <label for="sort-by">Ordenar por:</label>
+            <select id="sort-by">
+              <option value="name-asc">Nombre (A-Z)</option>
+              <option value="name-desc">Nombre (Z-A)</option>
+              <option value="price-asc">Precio (Menor a Mayor)</option>
+              <option value="price-desc">Precio (Mayor a Menor)</option>
+            </select>
+          </div>
+          <div id="products-list" class="product-grid">
+          </div>
+          <div id="pagination" class="pagination">
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <h2>Ferremas</h2>
+            <p>Su ferretería de confianza desde 2000</p>
+          </div>
+          <div class="footer-links">
+            <h3>Enlaces Rápidos</h3>
+            <ul>
+              <li><a href="index.html">Inicio</a></li>
+              <li><a href="productos.html">Productos</a></li>
+              <li><a href="nosotros.html">Nosotros</a></li>
+              <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h3>Contacto</h3>
+            <p>Av. Principal #123</p>
+            <p>Ciudad, País</p>
+            <p>Teléfono: 123-456-7890</p>
+            <p>Email: info@ferremas.com</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Ferremas. Todos los derechos reservados.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/auth.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/cart.js"></script>
+  </body>
+</html>
